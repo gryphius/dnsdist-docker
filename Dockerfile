@@ -6,5 +6,4 @@ EXPOSE 53
 EXPOSE 8083
 RUN cd /tmp && git clone https://github.com/PowerDNS/pdns.git && cd pdns/pdns/dnsdistdist  && autoreconf -i  && ./configure && make && make install
 CMD ["/usr/local/bin/dnsdist"]
-CMD ["8.8.4.4","8.8.8.8"]
 ADD dnsdist.conf /usr/local/etc/dnsdist.conf
